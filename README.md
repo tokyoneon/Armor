@@ -10,7 +10,7 @@ Admittedly, encrypting most macOS-specific payloads is overkill. This specific b
  
 ## Installation
 
-Armor relies on LibreSSL to encrypt the input file and create the SSL certificate. If LibreSSL it's found in your system, Armor will attempt to install it. The function for this can be invoked simply by executing `./armor.sh`. Ncat is also a dependency and can be installed in Kali using `$ apt-get update && apt-get install nmap`.
+Armor relies on LibreSSL to encrypt the input file and create the SSL certificate. If LibreSSL isn't found in your system, Armor will attempt to install it. The function for this can be invoked simply by executing `./armor.sh`. Ncat is also a dependency and can be installed in Kali using `$ apt-get update && apt-get install nmap`.
 
 Armor can be cloned and executed using the below commands.
 
