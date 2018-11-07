@@ -84,7 +84,6 @@ os_detect
 # special characters. Comment out the ascii_art function to suppress the 
 # logo. It's gimmicky, I know.
 function ascii_art () {
-	# https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo/65819#65819
 	echo -e "$R" "$(echo 'CgoKCSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLi4sY284b2Mub284ODg4Y2MsLi4KCSAg
 ICBvOG8uICAgICAgICAgICAgICAgIC4uLG84ODk2ODlvb284ODhvIjg4ODg4ODg4b29vYy4uCgkg
 IC44ODg4ICAgICAgICAgICAgICAgLm84ODg4Njg4OCIuODg4ODg4ODhvJz84ODg4ODg4ODg4ODlv
@@ -165,7 +164,6 @@ function openssl_check () {
 	}
 
 # The master key used to encrypt the payload is generated.
-# https://security.stackexchange.com/questions/196722/
 function mk_key () {
 	"$opensslPath" rand -hex 512 > "$inFile".key &&\
 	msg "Generated encryption key: "$dir"/"$inFile".key" ||\
